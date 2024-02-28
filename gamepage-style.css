@@ -8,6 +8,7 @@ this can be merged with other css pages eventually to create one css page used f
 #container{
     max-width: 1000px;
     margin: 0 auto;
+    background-color:cornflowerblue;
 }
 
 #header{
@@ -40,5 +41,55 @@ this can be merged with other css pages eventually to create one css page used f
 
 #profile-icon{
     display:flex;
+    padding:10px;
+}
+
+#top-game-box{
+    padding-top: 50px;
+    display:flex;
+    justify-content:space-evenly;
+}
+
+#popularity{
+    padding-top: 60px;
+    text-align: center;
+}
+
+#players{
+    padding-top: 60px;
+    text-align: center;
+}
+
+#middle-game-box{
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+#bottom-game-box{
+    padding-bottom:10px;
+    display:flex;
+    justify-content:space-evenly;
+}
+
+#description{
+    margin-left:10px;
+    width: 70%;
+    background-color:lightsalmon;
+    border: 2px solid black;
+}
+
+#purchase{
+    width: 30%;
+}
+
+#purchase ul{
+    list-style-type:none;
+}
+
+#purchase li{
+    padding:5px;
+}
+
+#purchase button{
     padding:10px;
 }
