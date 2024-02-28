@@ -1,0 +1,44 @@
+/*page styles
+
+this can be merged with other css pages eventually to create one css page used for everything, but not at the momment*/
+
+/*currently using placeholder colours and images*/
+
+/*container holds the entire page btw*/
+#container{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#header{
+    width: 100%;
+    height: 60px;
+    background-color:blanchedalmond;
+    display:flex;
+}
+
+#logo{
+    width:50px;
+    display: flex;
+    padding:10px;
+    margin:1px;
+}
+
+#navlinks{
+    height: 40px;
+    width: 100%;
+}
+
+#navlinks ul{
+    display: flex;
+    padding:10px;
+    margin:10px;
+    list-style-type:none;
+    justify-content: space-evenly;
+    
+}
+
+#profile-icon{
+    display:flex;
+    padding:10px;
+}
