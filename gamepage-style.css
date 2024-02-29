@@ -11,7 +11,7 @@ this can be merged with other css pages eventually to create one css page used f
     background-color:cornflowerblue;
 }
 
-#header{
+header {
     width: 100%;
     height: 60px;
     background-color:blanchedalmond;
@@ -129,7 +129,7 @@ this can be merged with other css pages eventually to create one css page used f
     text-align:center;
 }
 
-#footer{
+footer {
     background-color:dimgray;
     width:100%;
     height:30px;
