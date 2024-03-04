@@ -5,6 +5,10 @@ For Testing
 
 {% if user.is_authenticated %}
 Hello {{ user.username }}
+    <form action="{% url 'logout' %}" method="post">
+        {% csrf_token %}
+        <input type="submit" value="Sign Out">
+    </form>
     {% else %}
     Not logged in
 {% endif %}

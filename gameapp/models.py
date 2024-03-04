@@ -17,7 +17,7 @@ class Platform(models.Model):
         return self.name
 
 class Game(models.Model):
-    name = models.CharField(max_length=255)
+    name = models.CharField(max_length=255,default='')
     #slug = models.SlugField(max_length=255, unique=True)
     description = models.TextField(default='')
     release_date = models.DateTimeField()
@@ -25,9 +25,9 @@ class Game(models.Model):
     header_img = models.ImageField(upload_to='media/cover', default="media/temp-image.jpg")
     likes = models.IntegerField(default=0)
     plays = models.IntegerField(default=0)
-    publisher = models.ManyToManyField(Publisher, related_name='game_pub')
+    #publisher = models.ManyToManyField(Publisher, related_name='game_pub')
     tags = TaggableManager()
-    platforms = models.ManyToManyField(Platform, related_name='games_plat')
+    #platforms = models.ManyToManyField(Platform, related_name='games_plat')
 
     def adv_rating(self) -> float:
         return Review.objects.filter(game=self).exclude(0).aggregate(Avg('rating'))['avg_rating']
