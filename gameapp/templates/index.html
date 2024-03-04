@@ -1,1 +1,12 @@
-<h1>yippee</h1>
+<!DOCTYPE html>
+<h1>Placeholder Home Page</h1>
+<body>
+For Testing
+
+{% if user.is_authenticated %}
+Hello {{ user.username }}
+    {% else %}
+    Not logged in
+{% endif %}
+
+</body>
