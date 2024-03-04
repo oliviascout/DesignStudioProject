@@ -1,1 +1,16 @@
-<h1>yippee</h1>
+<!DOCTYPE html>
+<h1>Placeholder Home Page 01</h1>
+<body>
+For Testing
+
+{% if user.is_authenticated %}
+Hello {{ user.username }}
+    <form action="{% url 'logout' %}" method="post">
+        {% csrf_token %}
+        <input type="submit" value="Sign Out">
+    </form>
+    {% else %}
+    Not logged in
+{% endif %}
+
+</body>
