@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
     <head>
         <title>game page</title>
-        <link rel="stylesheet" href="../../gamepage-style.css"/>
+        <link rel="stylesheet" href="{% static 'css/gamepage-style.css' %}"/>
     </head>
-
+    {% block content %}
     <body>
         <div id="container">
             <!--header-->
@@ -34,7 +35,7 @@
                         <p>popularity</p>
                     </div>
                     <div id="game-image">
-                        <img src="https://www.pcgamesarchive.com/wp-content/uploads/2020/04/Doom-768x1073.jpg" width="200"/>
+                        <img src="/media/{{game_items.cover_img}}" width="200"/>
                     </div>
                     <div id="players">
                         <img scr="https://www.pinclipart.com/picdir/big/12-123387_circle-clipart-light-brown-circle-png-download.png" width="40" height="40"/>
@@ -44,7 +45,7 @@
 
                 <div id="middle-game-box">
                     <div id="game-title">
-                        <h2>GAME TITLE</h2>
+                        <h2>{{game_items.name }}</h2>
                     </div>
                     <div id="rating">
                         0/5 stars
@@ -53,7 +54,7 @@
 
                 <div id="bottom-game-box">
                     <div id="description">
-                        <p>The film's storyline follows the same continuity as the Transformers cartoon. It introduces a planet-sized Transformer called Unicron who eats other planets, and is approaching Cybertron. As part of their continuing wars, the Autobots and Decepticons have a fierce battle on Earth which sees both Optimus Prime and Megatron mortally wounded. </p>
+                        <p>{{ game_items.description }} </p>
                     </div>
                     <div id="purchase">
                         <ul>
@@ -94,4 +95,5 @@
             </footer>
         </div>
     </body>
+    {% endblock %}
 </html>
