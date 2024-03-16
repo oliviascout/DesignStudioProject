@@ -20,5 +20,18 @@ def index(request):
 
 def game_detail(request, slug):
     game = Game.objects.get(slug=slug)
-
     return render(request, 'gamepage.html',{'game_items': game})
+
+def review_detail(request, slug):
+    template_name = 'review_detail.html'
+    game = get_object_or_404(Game, slug=slug)
+    reviews = game.reviews.filter(heart=True)
+    new_review = None
+    if request.method == 'POST':
+        review_form = ReviewForm(data=request.POST)
+        if review_form.is_valid():
+            #create review but dont save to database yet
+            new_review = review_form.save(commit=False)
+            #assign current game to review
+            new_review.game = game
+            #save review to database
