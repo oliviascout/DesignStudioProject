@@ -14,7 +14,7 @@ admin.site.register(Game)
 class ReviewAdmin(admin.ModelAdmin):
     list_display = ('user', 'content', 'game', 'date', 'heart')
     list_filter = ('heart', 'date')
-    search_fields = ('user', 'content')
+    search_fields = ('user', 'email', 'content')
     actions = ['aprrove_comments']
 
     def approve_comments(self, request, queryset):

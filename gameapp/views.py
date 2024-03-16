@@ -35,3 +35,10 @@ def review_detail(request, slug):
             #assign current game to review
             new_review.game = game
             #save review to database
+            new_review.save()
+    else:
+        review_form = ReviewForm()
+    return render(request, template_name, {'game': game,
+                                               'reviews': reviews,
+                                               'new_review': new_review,
+                                               'review_form':review_form})

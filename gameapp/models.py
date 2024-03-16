@@ -38,6 +38,7 @@ class Game(models.Model):
 class Review(models.Model):
     game = models.ForeignKey(Game, on_delete=models.CASCADE, related_name='reviews')
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user_reviews')
+    email = models.EmailField()
     title = models.CharField(max_length=255)
     content = models.TextField()
     date = models.DateTimeField(auto_now_add=True)
@@ -46,7 +47,7 @@ class Review(models.Model):
     heart = models.BooleanField(default=False)
 
     class Meta:
-        ordering = ['created_on']
+        ordering = ['date']
 
     def __str__(self):
         return self.user
