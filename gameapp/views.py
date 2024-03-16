@@ -1,8 +1,10 @@
 
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Game
+from .models import Review
+from .forms import ReviewForm
 from django.views import generic
 # Create your views here.
 @login_required
