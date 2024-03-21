@@ -70,14 +70,15 @@
                 <div id="review-box">
                     <h3>Reviews</h3>
                     {% for review in reviews %}
-                    <div class="reviews">
-                        <p class="font-weight-bold">
-                            {{review.user}}
-                            <span class="text-muted font-weight-normal">
-                            {{review.date}}
-                            </span>
-                        </p>
-                        {{review.content | linebreaks}}
+                        <div class="reviews">
+                            <p class="font-weight-bold">
+                                {{review.user}}
+                                <span class="text-muted font-weight-normal">
+                                {{review.date}}
+                                </span>
+                            </p>
+                            {{review.title}}
+                            {{review.content | linebreaks}}
                     </div>
                     {% endfor %}
 
@@ -97,7 +98,20 @@
                         </div>
                         <h3>rate it</h3>
                         <img src="https://www.bluleadz.com/hs-fs/hubfs/IkeaLogo1.png" width="70"/>
-                        <h3>make comment</h3>
+                        <div class="card-body">
+                            {% if new_review %}
+                                <div class="alert alert-success" role="alert">
+                                    awaiting moderation
+                                </div>
+                            {% else %}
+                                <h3>leave a comment!</h3>
+                                <form method="post">
+                                    {% csrf_token %}
+                                    {{ review_form.as_p }}
+                                    <button type="submit">submit</button>
+                                </form>
+                            {% endif %}
+                        </div>
                     </div>
                     
                 </div>
