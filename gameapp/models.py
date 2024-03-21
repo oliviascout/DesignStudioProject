@@ -38,7 +38,6 @@ class Game(models.Model):
 class Review(models.Model):
     game = models.ForeignKey(Game, on_delete=models.CASCADE, related_name='reviews')
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user_reviews')
-    #name = models.CharField(max_length=80)
     title = models.CharField(max_length=255)
     content = models.TextField()
     date = models.DateTimeField(auto_now_add=True)

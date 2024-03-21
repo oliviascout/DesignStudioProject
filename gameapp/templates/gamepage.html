@@ -71,11 +71,9 @@
                     <h3>Reviews</h3>
                     {% for review in reviews %}
                         <div class="reviews">
-                            <p class="font-weight-bold">
-                                {{review.user}}
-                                <span class="text-muted font-weight-normal">
+                            <p>
+                                <b>{{review.user}}</b>
                                 {{review.date}}
-                                </span>
                             </p>
                             {{review.title}}
                             {{review.content | linebreaks}}
@@ -99,7 +97,14 @@
                         <h3>rate it</h3>
                         <img src="https://www.bluleadz.com/hs-fs/hubfs/IkeaLogo1.png" width="70"/>
                         <div class="card-body">
-                            {% if new_review %}
+                            <h3>leave a review!</h3>
+                                <form method="post">
+                                    {% csrf_token %}
+                                    {{ review_form.as_p }}
+                                    <button type="submit">submit</button>
+                                </form>
+
+                            <!--{% if new_review %}
                                 <div class="alert alert-success" role="alert">
                                     awaiting moderation
                                 </div>
@@ -110,7 +115,7 @@
                                     {{ review_form.as_p }}
                                     <button type="submit">submit</button>
                                 </form>
-                            {% endif %}
+                            {% endif %}-->
                         </div>
                     </div>
                     

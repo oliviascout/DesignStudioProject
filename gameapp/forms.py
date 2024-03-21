@@ -5,4 +5,4 @@ from django.forms import ModelForm
 class ReviewForm(ModelForm):
     class Meta:
         model = Review
-        fields = ('title', 'content',) #
+        fields = ('user', 'title', 'content',) #
