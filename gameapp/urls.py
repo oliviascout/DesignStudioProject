@@ -7,4 +7,5 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('accounts/', include('django.contrib.auth.urls')),
     path('game-detail/<slug:slug>/', views.game_detail, name='game_detail'),
+    #path('game-detail/<slug:slug>/reviews/', views.review_detail, name='review_detail')
 ] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

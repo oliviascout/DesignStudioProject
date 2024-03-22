@@ -45,5 +45,8 @@ class Review(models.Model):
     rating = models.PositiveSmallIntegerField(default=0, validators=[MinValueValidator(0), MaxValueValidator(10)])
     heart = models.BooleanField(default=False)
 
+    class Meta:
+        ordering = ['date']
+
     def __str__(self):
-        return self.user
+        return self.title
