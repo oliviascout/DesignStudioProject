@@ -27,7 +27,8 @@ def game_detail(request, slug):
         if review_form.is_valid():
             #create review but dont save to database yet
             new_review = review_form.save(commit=False)
-            #assign current game to review
+            #assign current user and game to review
+            new_review.user = request.user
             new_review.game = game
             #save review to database
             new_review.save()

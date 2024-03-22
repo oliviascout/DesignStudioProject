@@ -97,12 +97,17 @@
                         <h3>rate it</h3>
                         <img src="https://www.bluleadz.com/hs-fs/hubfs/IkeaLogo1.png" width="70"/>
                         <div class="card-body">
-                            <h3>leave a review!</h3>
-                                <form method="post">
-                                    {% csrf_token %}
-                                    {{ review_form.as_p }}
-                                    <button type="submit">submit</button>
-                                </form>
+                            {% if user.is_authenticated %}
+                                <h3>leave a review!</h3>
+                                    <form method="post">
+                                        {% csrf_token %}
+                                        {{ review_form.as_p }}
+                                        <button type="submit">submit</button>
+                                    </form>
+                                {% else %}
+                                    <h3>Please sign in to leave a review!</h3>
+                            {% endif %}
+                            
 
                             <!--{% if new_review %}
                                 <div class="alert alert-success" role="alert">
