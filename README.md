@@ -1,24 +1,25 @@
 TEAM SKEAKHOLDERS 
 Application: A Site to catalogue, rate, and list games you have played. The site has profiles that people can collect points for rewards, they get these points by various means interacting with the website.
 
------- SPRINT 1 ------
+------ SPRINT 2 ------
 
 Screenshots of the Homepage test, Profile page, and game page:
-![homepage](https://github.com/oliviascout/DesignStudioProject/assets/124936174/4eb355a7-8825-4202-a605-8ce2317d4982)
-![profile](https://github.com/oliviascout/DesignStudioProject/assets/124936174/90f2f4e1-5793-4573-98e7-313ab046526a)
-![gamepage](https://github.com/oliviascout/DesignStudioProject/assets/124936174/c17e1f58-78cb-4ce6-91ea-e204cdbba4ea)
+![s2homepage](https://github.com/oliviascout/DesignStudioProject/assets/124936174/f867431f-3d86-45b5-9af3-c74106a5db50)
+![s2gamepage](https://github.com/oliviascout/DesignStudioProject/assets/124936174/0724fec8-23a5-4255-9821-caf6aedfe85e)
+![s2comments](https://github.com/oliviascout/DesignStudioProject/assets/124936174/2c866252-8546-4aa8-a356-ba1bdb912125)
 
-Features Complete:
-Django project set up,
-Game Database set up,
-Survey creation done,
-Profile html set up,
-Game page html set up
 
-Features Not complete in the Sprint:
-Connect games to user profiles,
-Connect  html files together or with the database
+Features complete in sprint 2:
+Added comment system
+Login/log out system
+connected home page to gamepage and profile
+Designed the look for the search/homepage/ and tier list page
+Created Logo/brand
+Sent Survey for reviews/games
 
+Not complete:
+Complete the game page design
+expland on the game database
 
 
 Product Goal:
