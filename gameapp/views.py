@@ -16,6 +16,8 @@ def index(request):
  #   model = Game
   #  template_name = 'gamepage.html'
 
+def profile(request):
+    return render(request, 'profile_page.html')
 def game_detail(request, slug):
     game = Game.objects.get(slug=slug)
     gameid = game.id
