@@ -5,6 +5,8 @@
 
 {% if user.is_authenticated %}
 Hello {{ user.username }}
+    
+    <a href="{% url 'profile'%}">View Profile</a>
     <form action="{% url 'logout' %}" method="post">
         {% csrf_token %}
         <input type="submit" value="Sign Out">
