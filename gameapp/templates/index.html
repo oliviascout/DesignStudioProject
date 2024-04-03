@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<h1>Homepage</h1>
+<h1>Mirage Score</h1>
+<h2>Homepage</h2>
 <body>
 
 
@@ -16,10 +17,20 @@ Hello {{ user.username }}
 {% endif %}
 
 {% block content %}
-    
+    <style>
+      ul {
+        display: inline-flex;
+      }
+      li {
+          display: block;
+      }
+      
+    </style>
     <div class = "gameBasicRow">
+    <ul>
+    <li>
     {% for Game in game_items %}
-        <li>
+        
             <div class="gameCard">
              
             <img src="/media/{{Game.cover_img}}" width="80"/>
@@ -27,8 +38,10 @@ Hello {{ user.username }}
              <a href="{% url 'game_detail' Game.slug %}" >{{Game.name }}</a>
             <br>
             </div>
-        </li>
+        
     {% endfor %}
+    </li>
+    </ul>
     </div>
     
 {% endblock content %}
